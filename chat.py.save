@@ -1,0 +1,10 @@
+import requests,json
+from requests_oauthlib import OAuth1
+import feedparser
+token = "MDAxOGxvY2F0aW9uIG1hdHJpeC5vcmcKMDAxM2lkZW50aWZpZXIga2V5CjAwMTBjaWQgZ2VuID0gMQowMDI4Y2lkIHVzZXJfaWQgPSBAYW1hbGRldmNzOm1hdHJpeC5vcmcKMDAxNmNpZCB0eXBlID0gYWNjZXNzCjAwMjFjaWQgbm9uY2UgPSBRU2MsYU9vMn5LWEw9MnQ3CjAwMmZzaWduYXR1cmUgnufaSzM_y5gwiYnRnuqt2OpTIPaywRDJjJ37rbGJ0zQK"
+url = ""https:///_matrix/client/r0/rooms/%21asfLdzLnOdGRkdPZWu:localhost/send/m.room.message?access_token="+token
+auth = OAuth1(token)
+r = requests.get(url)
+print r
+
+

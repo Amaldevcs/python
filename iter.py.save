@@ -1,0 +1,18 @@
+class inverse:
+ def __init__(self,a):
+  self.n = a
+  self.len = len(a)-1
+  print self.n
+ def __iter__(self):
+  return self
+ def next(self):
+  self.lens = self.len
+  if self.lens > 0:
+   return self.n[self.len]
+   self.lens=self.lens-1
+  else:
+   raise "Stopiteration"  
+b =inverse([1,2,3,4])
+print b.next()
+print b.next()
+print b.next()
